@@ -23,7 +23,7 @@ class _State extends State<Mobile> {
                 ),
 
                 const Padding(
-                  padding: EdgeInsets.only(left:140,top:10),
+                  padding: EdgeInsets.only(left:100,top:10),
                   child: Text("Enter your mobile number",style: TextStyle(color: Colors.black,fontSize: 15),
                   ),
                 ),
@@ -42,7 +42,7 @@ class _State extends State<Mobile> {
                         labelText: 'Mobile Number',
                       ),
                       validator: (value){
-                        if(value!.isEmpty||!RegExp(r'^[6,7,8,9]+$').hasMatch(value!)){
+                        if(value!.isEmpty||!RegExp(r'^[6,7,8,9]+[0-9]+$').hasMatch(value!)){
                           return "Enter valid mobile number";
                         }
                         else{
